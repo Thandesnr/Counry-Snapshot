@@ -12,7 +12,7 @@
 
 ## work in progress versions and changes
 
-Code optimization
-state management React-Redux Toolkit
-use of MUI
+Code optimization,
+state management React-Redux Toolkit,
+use of MUI,
 Better styling
