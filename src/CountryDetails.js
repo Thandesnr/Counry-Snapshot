@@ -8,7 +8,7 @@ function CountryDetail() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`https://restcountries.com/v2/alpha/${alpha3Code}`);
+      const response = await fetch(`https://restcountries.com/v3.1/alpha/${alpha3Code}`);
       const data = await response.json();
       setCountry(() => data);
     }

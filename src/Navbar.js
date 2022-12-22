@@ -8,7 +8,7 @@ function Navbar() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const response = await fetch(`https://restcountries.com/v2/name/${searchTerm}`);
+    const response = await fetch(`https://restcountries.com/v3.1/name/${searchTerm}`);
     const data = await response.json();
 
     if (data.length > 0) {
