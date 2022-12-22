@@ -11,7 +11,7 @@ function Home() {
     async function fetchData() {
       const response = await fetch('https://restcountries.com/v3.1/all');
       const data = await response.json();
-      setCountries(data);
+      setCountries(() => data);
 
       const chunkSize = 5;
       const chunks = [];
@@ -32,18 +32,16 @@ function Home() {
   </span>
     <ul>
     {chunk.map((country) => (
-    <li className='item' key={country.name}>
+    <li className='item' key={country.cca3}>
     <h3>
-    <Link className='name' to={`/countries/${country.alpha3Code}`}>
-      {country.name}
-    </Link>
-        </h3>
+    <Link className='name' to={`/countries/${country.cca3}`}>
++      {country.name.common}
+     </Link>        </h3>
             <p>
               Region: {country.region}
               <br />
-              Languages: {country.languages.map((language) => language.name).join(', ')}
-              <br />
-              Flag: <img src={country.flag} className="flag" alt={`Flag of ${country.name}`} />
+              Languages: {Object.values(country.languages).map((language) => language).join(', ')}              <br />
+               <img src={country.flags.svg} className="flag" alt={`Flag of ${country.name.common}`} />
             </p>
           </li>
         ))}

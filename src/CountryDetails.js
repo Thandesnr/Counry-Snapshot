@@ -10,7 +10,7 @@ function CountryDetail() {
     async function fetchData() {
       const response = await fetch(`https://restcountries.com/v3.1/alpha/${alpha3Code}`);
       const data = await response.json();
-      setCountry(() => data);
+      setCountry(() => data[0]);
     }
 
     fetchData();
@@ -21,13 +21,13 @@ function CountryDetail() {
   }
   return (
     <div className="container">
-      <h2>{country.name}</h2>
+      <h2>{country.name.common}</h2>
       <p>
         Region: {country.region}
         <br />
-        Languages: {country.languages.map((language) => language.name).join(', ')}
+        Languages:  {Object.values(country.languages).map((language) => language).join(', ')}
         <br />
-        Currencies: {country.currencies.map((currency) => currency.name).join(', ')}
+        Currencies: {Object.values(country.currencies).map((currency) => currency.name).join(', ')}
         <br />
         Population: {country.population.toLocaleString()}
       </p>

@@ -12,7 +12,7 @@ function Navbar() {
     const data = await response.json();
 
     if (data.length > 0) {
-      navigate(`/countries/${data[0].alpha3Code}`);
+      navigate(`/countries/${data[0].cca3}`);
     } else {
       alert(`No countries found with name "${searchTerm}"`);
     }
