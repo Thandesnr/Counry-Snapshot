@@ -1,22 +1,17 @@
-# Data Science and Machine Learning Project
 
-This project aims to analyze a dataset and identify the most important products (or items) based on certain criteria, such as sales, customer preferences, or other relevant metrics. By applying machine learning techniques, the goal is to generate insights into which products have the highest impact, allowing for data-driven decision-making.
+# German Credit Bank Data - EDA & Statistical Analysis
 
-## Key Features
-- **Data Preprocessing**: Cleaning, tokenization, and text processing to prepare the data for analysis.
-- **Feature Extraction**: Identifying important features that influence product importance.
-- **Machine Learning Models**: Implementations of regression and classification models, including Decision Trees, Random Forests, Gradient Boosting, and XGBoost to rank and predict the most important products.
-- **Model Evaluation**: Using metrics like R², Accuracy, and Mean Squared Error to evaluate model performance.
-- **Data Visualization**: Generating visualizations to highlight key product insights using `matplotlib`, `seaborn`, and `plotly`.
-- **Dash Web Application**: A user-friendly interface to display the results interactively and explore the most important products.
+This project performs **Exploratory Data Analysis (EDA)** and **statistical analysis** on the German Credit Bank dataset. The system focuses on credit analysis by examining the relationship between credit amounts and various factors like housing types, along with conducting statistical tests such as ANOVA.
 
-## Aim of the Project
-The primary goal of this project is to:
-1. Identify and rank the most important products based on given data and features.
-2. Provide a data-driven approach to decision-making in product selection, inventory management, and marketing strategies.
-3. Visualize the insights for better understanding and actionable results.
+## Key Features:
+- **ANOVA Test**: Tests for significant differences in credit amounts between different housing types (free, own, rent).
+- **Data Visualization**: Provides interactive visualizations to explore the dataset, including pairplots and heatmaps.
+- **Credit Analysis**: Performs statistical analysis on credit data to identify patterns and significant differences.
+- **Machine Learning**: Implements a **Random Forest Classifier** to predict creditworthiness based on the dataset.
 
-
-
-
-
+## Features:
+- **Interactive Dashboards**: Allows users to select target variables and feature variables to visualize using dropdown menus.
+- **Visualization Options**: Choose between different visualization types, such as pairplots for feature comparisons or correlation heatmaps for feature relationships.
+- **ANOVA Hypothesis Testing**: Performs an ANOVA test to check if there is a significant difference in credit amounts based on housing type.
+  
+These features automate the analysis process, helping to uncover patterns in the credit data and assess the relationship between housing types and credit amounts.
